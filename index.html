@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Giphy</title>
@@ -15,5 +15,34 @@
 </head>
 <body>
 
+	<div class="container">
+		
+		<!-- Buttons go here -->
+		<div class="header">
+			<h2>Click a button to generate gifs of your favorite animal!</h2>
+			<button class="btn btn-primary giphy" data-value="cat">cat</button>
+			<button class="btn btn-primary giphy" data-value="dog">dog</button>
+			<button class="btn btn-primary giphy" data-value="bird">bird</button>
+			<button class="btn btn-primary giphy" data-value="lizard">lizard</button>
+			<button class="btn btn-primary giphy" data-value="snake">snake</button>
+		</div>
+		
+
+		<div class="row">
+			<!-- Gifs display here -->
+			<div class="col-lg-8" id="giphy-display"></div>
+			
+			<!-- Form search/add button -->
+			<div class="col-lg-4">
+				<form>
+					<div class="form-group">
+					    <label for="">Add your own!</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter animal">
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
 </body>
 </html>
