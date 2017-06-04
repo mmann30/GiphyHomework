@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Giphy</title>
+	<title>Giphy Cookbook</title>
 
 	<!-- Twitter Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,12 +19,8 @@
 		
 		<!-- Buttons go here -->
 		<div class="header">
-			<h2>Click a button to generate gifs of your favorite animal!</h2>
-			<button class="btn btn-primary giphy" data-value="cat">cat</button>
-			<button class="btn btn-primary giphy" data-value="dog">dog</button>
-			<button class="btn btn-primary giphy" data-value="bird">bird</button>
-			<button class="btn btn-primary giphy" data-value="lizard">lizard</button>
-			<button class="btn btn-primary giphy" data-value="snake">snake</button>
+			<h2>Click a button to generate gif recipies with your favorite ingredient</h2>
+			<div id="button-display"></div>
 		</div>
 		
 
@@ -36,7 +32,7 @@
 			<div class="col-lg-4">
 				<form>
 					<div class="form-group">
-					    <label for="">Add your own!</label>
+					    <label for="">Add your own ingredient!</label>
 					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter animal">
 					</div>
 				</form>
