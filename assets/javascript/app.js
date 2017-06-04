@@ -6,8 +6,8 @@
 var apiKey  = "dc6zaTOxFJmzC";
 
 var queryTerm = "";
-var limit = 0;
-var rating = 0  // Is this necesarry?
+var limit = 10;		// number of gifs to display
+var rating = "g";  	// gif rating
 
 var arrIngredients = ["chicken", "hamburger", "rice", "tomato", "potato", "corn"];
 
@@ -44,6 +44,9 @@ $("#submit-ingredient").on("click", function(event) {
 });
 
 
+// TODO: Create gif pause/play event
+// TODO: 
+
 // .on("click") triggers the AJAX call
 // add click event to document so it applies to newly generated buttons
 $(document).on("click", ".giphy", function(event){
@@ -61,12 +64,12 @@ $(document).on("click", ".giphy", function(event){
 		console.log(queryURLNew);
 		console.log(response);
 		
-		// create div space for each gif (for loop) 
+		// TODO:  create div space for each gif (for loop) 
 		
 
 		// class=gif for each data-state=still/animate ...?
-		//get some number of gifs
-		// giphy api query will be based on button value
+		// TODO:  limit display to 10 gifs
+		// TODO:  limit gifs shown to "g" rating
 
 	//>>>>>> Ends AJAX Call
 	});
