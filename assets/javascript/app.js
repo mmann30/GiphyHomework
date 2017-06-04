@@ -16,6 +16,7 @@ var queryURLBase = "http://api.giphy.com/v1/gifs/search?api_key=" + apiKey;
 
 // FUNCTIONS
 //============================================
+
 function renderButtons() {
 	$("#button-display").empty();
 
@@ -32,22 +33,20 @@ function renderButtons() {
 
 renderButtons();
 
+$("#submit-ingredient").on("click", function(event) {
+	
+	event.preventDefault();
 
-function newIngredient(){
-	// creates new button from form input
-}
+	var newIngredient = $("#new-ingredient").val().trim();
+	arrIngredients.push(newIngredient);
 
-
-
-// add form functionality
-// get user input from search bar through "search" button
-// populate button array with user input
-// button data value == user input
-
+	renderButtons();
+});
 
 
 // .on("click") triggers the AJAX call
-$(".giphy").on("click", function(event){
+// add click event to document so it applies to newly generated buttons
+$(document).on("click", ".giphy", function(event){
 	
 	var queryTerm = $(this).data("value") + "+recipie";
 	console.log(queryTerm);
