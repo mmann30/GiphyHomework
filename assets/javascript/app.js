@@ -80,7 +80,10 @@ $(document).on("click", ".giphy", function(event){
 
 			var giphyURLStill = response.data[i].images.fixed_width_still.url;
 			var giphyURLAnimate = response.data[i].images.fixed_width.url;
+			var giphyRating = response.data[i].rating;
+			var giphyFig = $("<figure>");	
 			var giphyImage = $("<img>");
+			var giphyCap = $("<figcaption>");
 
 			giphyImage.attr("src", giphyURLStill);
 			giphyImage.attr("data-state", "still");
@@ -88,11 +91,16 @@ $(document).on("click", ".giphy", function(event){
 			giphyImage.attr("data-animate", giphyURLAnimate);
 			giphyImage.attr("alt", "gif image");
 			giphyImage.addClass("gif");
-			$("#giphy-display").prepend(giphyImage);
+
+			giphyCap.html("Rating: " + giphyRating);
+
+			giphyFig.append(giphyImage);
+			giphyFig.append(giphyCap);
+
+			$("#giphy-display").prepend(giphyFig);
 
 		}
-		// class=gif for each data-state=still/animate ...?
-		// TODO:  limit display to 10 gifs
+		
 		// TODO:  limit gifs shown to "g" rating
 
 	//>>>>>> Ends AJAX Call
