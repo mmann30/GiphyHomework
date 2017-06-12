@@ -11,7 +11,7 @@ var rating = "g";  	// gif rating
 
 var arrIngredients = ["chicken", "hamburger", "tacos", "salad", "french fries", "bacon", "pasta", "dessert"];
 
-var queryURLBase = "http://api.giphy.com/v1/gifs/search?api_key=" + apiKey;
+var queryURLBase = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey;
 
 
 // FUNCTIONS
